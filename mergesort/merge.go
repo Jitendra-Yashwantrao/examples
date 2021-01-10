@@ -1,10 +1,5 @@
 package mergesort
 
-import (
-	"math/rand"
-	"time"
-)
-
 func MergeSort(slice []int) []int {
 
 	if len(slice) < 2 {
@@ -40,13 +35,4 @@ func Merge(left, right []int) []int {
 		}
 	}
 	return result
-}
-
-func GetRandomList(size int) []int {
-	rand.Seed(time.Now().UnixNano())
-	newList := make([]int, size, size)
-	for i := 0; i < size; i++ {
-		newList[i] = rand.Intn(9999)
-	}
-	return newList
 }

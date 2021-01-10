@@ -1,6 +1,7 @@
 package mergesort
 
 import (
+	"examples/util"
 	"fmt"
 	"testing"
 )
@@ -18,7 +19,7 @@ func TestMergeSort_1(t *testing.T) {
 
 func TestMergeSort_10(t *testing.T) {
 
-	list := GetRandomList(10)
+	list := util.GetRandomList(10)
 	sortedList := MergeSort(list)
 	fmt.Println("unsorted list", list)
 	fmt.Println("Sorted List", sortedList)
@@ -29,7 +30,7 @@ func TestMergeSort_10(t *testing.T) {
 
 func TestMergeSort_19(t *testing.T) {
 
-	list := GetRandomList(19)
+	list := util.GetRandomList(19)
 	sortedList := MergeSort(list)
 	fmt.Println("unsorted list", list)
 	fmt.Println("Sorted List", sortedList)
