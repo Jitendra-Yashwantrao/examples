@@ -1,14 +1,16 @@
 package threesum
 
 import (
-	"examples/mergesort"
 	"fmt"
+	"sort"
 )
 
 //ThreeSum sum of three nums to zero
 func ThreeSum(nums []int) [][]int {
 	tripletList := make([][]int, 0, 0)
-	sortednums := mergesort.MergeSort(nums)
+	//sortednums := mergesort.MergeSort(nums)
+	sortednums := nums
+	sort.Ints(sortednums)
 	fmt.Println("sorted list", sortednums)
 	uniquetriplet := make(map[string]string)
 	for i := 0; i < len(sortednums); i++ {
