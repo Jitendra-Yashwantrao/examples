@@ -11,6 +11,7 @@ func main() {
 	fmt.Println("Results ", twoSum(input, 6))
 }
 
+//O(n)
 func twoSum(nums []int, target int) []int {
 
 	var answers []int
