@@ -14,6 +14,13 @@ func main() {
 	//c as an array, array assignement is copy by value where slice assignment is by reference
 	//c := [5]int{10, 20, 30, 40, 50}
 
+	numbers := []int{1, 3}
+
+	fmt.Printf("slice numbers - len : %v , cap : %v , address : %p \n", len(numbers), cap(numbers), &numbers)
+
+	numbers = append(numbers, 4)
+	fmt.Printf("slice numbers - len : %v , cap : %v , address : %p \n", len(numbers), cap(numbers), &numbers)
+
 	//c as an slice
 	c := []int{10, 20, 30, 40, 50}
 
@@ -74,10 +81,20 @@ func main() {
 	//case 2
 	s = append(s, 3)
 	x := append(s, 4)
+	fmt.Println("Intermediate x", x, "len", len(x), "cap", cap(x), "address of x %p, %p", &x[2], &x[3])
 	y := append(s, 5)
 	fmt.Println("s: ", s, "\nx: ", x, "\ny: ", y)
 	fmt.Println("s", s, "len", len(s), "cap", cap(s), "address of s %p", &s[2])
-	fmt.Println("x", x, "len", len(x), "cap", cap(x), "address of x %p, %p", &x[1], &x[2])
-	fmt.Println("y", y, "len", len(y), "cap", cap(y), "address of y %p, %p", &t[1], &t[2])
+	fmt.Println("x", x, "len", len(x), "cap", cap(x), "address of x %p, %p", &x[2], &x[3])
+	fmt.Println("y", y, "len", len(y), "cap", cap(y), "address of y %p, %p", &y[2], &y[3])
+
+	fmt.Println("After changing first element of s")
+	//case 2
+	s[0] = 1
+	y[3] = 500
+	fmt.Println("s: ", s, "\nx: ", x, "\ny: ", y)
+	fmt.Println("s", s, "len", len(s), "cap", cap(s), "address of s %p", &s[2])
+	fmt.Println("x", x, "len", len(x), "cap", cap(x), "address of x %p, %p", &x[2], &x[3])
+	fmt.Println("y", y, "len", len(y), "cap", cap(y), "address of y %p, %p", &y[2], &y[3])
 
 }
