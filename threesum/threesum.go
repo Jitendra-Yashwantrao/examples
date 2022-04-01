@@ -5,6 +5,7 @@ import (
 	"sort"
 )
 
+//O(nlogn)
 //ThreeSum sum of three nums to zero
 func ThreeSum(nums []int) [][]int {
 	tripletList := make([][]int, 0, 0)
